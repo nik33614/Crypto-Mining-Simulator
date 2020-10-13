@@ -5,30 +5,41 @@ using UnityEngine.Advertisements;
 
 public class Ad : MonoBehaviour
 {
-    
+
     string gameId = "3612705";
-    bool testMode = true;
+    bool testMode = false;
 
     void Start()
     {
-        int a = PlayerPrefs.GetInt("ad");
-        Advertisement.Initialize(gameId, testMode);
-        if (a >= 3)
+        int z = PlayerPrefs.GetInt("ads");
+        if (z == 0)
         {
-            if (Advertisement.IsReady())
+
+
+
+            int a = PlayerPrefs.GetInt("ad");
+            Advertisement.Initialize(gameId, testMode);
+            if (a >= 3)
             {
+                if (Advertisement.IsReady())
+                {
 
-                Advertisement.Show();
-                int ab = PlayerPrefs.GetInt("money");
+                    Advertisement.Show();
+                    int ab = PlayerPrefs.GetInt("money");
 
-                ab = ab + 1;
+                    ab = ab + 1;
 
-                PlayerPrefs.SetInt("money", ab);
+                    PlayerPrefs.SetInt("money", ab);
 
-                PlayerPrefs.SetInt("ad", 0);
+                    PlayerPrefs.SetInt("ad", 0);
 
 
+                }
             }
+        }
+        else
+        {
+
         }
     }
 }

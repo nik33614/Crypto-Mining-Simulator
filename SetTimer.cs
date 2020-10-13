@@ -10,10 +10,16 @@ public class SetTimer : MonoBehaviour
     void Start()
     {
         a = PlayerPrefs.GetFloat("timer");
+        float b = PlayerPrefs.GetFloat("timer1");
 
-        if(a == 0)
+        if (a == 0)
         {
             PlayerPrefs.SetFloat("timer", 6);
+        }
+
+        if (b == 0)
+        {
+            PlayerPrefs.SetFloat("timer1", 6);
         }
 
     }

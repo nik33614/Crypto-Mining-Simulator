@@ -23,18 +23,11 @@ public class SetChangescene : MonoBehaviour
         int change = PlayerPrefs.GetInt("Easy");
         if (timer <= 0)
         {
-            if (change == 0)
-            {
+            
                 int a = Random.Range(2, 4);
 
                 Application.LoadLevel(a);
-            }
-            else
-            {
-                int a = Random.Range(9, 11);
-
-                Application.LoadLevel(a);
-            }
+            
 
         }
 

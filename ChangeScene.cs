@@ -4,25 +4,16 @@ using UnityEngine;
 
 public class ChangeScene : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D col)
+    void Start()
     {
-        int change = PlayerPrefs.GetInt("Easy"); 
-
-        if (col.tag == "Player")
-        {
-            if (change == 0)
-            {
+        
+            
+            
                 int a = Random.Range(2, 4);
 
                 Application.LoadLevel(a);
-            }
-            else
-            {
-                int a = Random.Range(9, 11);
-
-                Application.LoadLevel(a);
-            }
-        }
+           
+      
 
 
     }

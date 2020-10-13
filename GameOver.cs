@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     public int a;
+    int change;
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -12,15 +13,34 @@ public class GameOver : MonoBehaviour
         {
             if (a == 5)
             {
+                int level = PlayerPrefs.GetInt("language");
+                if (level == 1)
+                {
+                    change = 18;
+                }
+                else
+                {
+                    change = 12;
+                }
+
                 PlayerPrefs.SetFloat("Speed", 1.5f);
-                Application.LoadLevel(12);
+                Application.LoadLevel(change);
             }
             else
             {
-
-                Application.LoadLevel(6);
-
+                int level = PlayerPrefs.GetInt("language");
+                if (level == 1)
+                {
+                    change = 16;
+                }
+                else
+                {
+                    change = 6;
+                }
                 PlayerPrefs.SetFloat("Speed", 1.5f);
+                Application.LoadLevel(change);
+
+                
             }
         }
 

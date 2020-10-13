@@ -7,7 +7,7 @@ public class ChangeSceneStart : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Easy", 0);
+        PlayerPrefs.SetInt("Easy", 1);
     }
 
     public void Change()

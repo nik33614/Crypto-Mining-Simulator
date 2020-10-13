@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextBuy : MonoBehaviour
+public class TextBuy1 : MonoBehaviour
 {
     int jetupgrade;
     int cost;
     public UnityEngine.UI.Text ScoresText;
     public GameObject start;
     public GameObject starts;
-
     void Update()
     {
-        jetupgrade = PlayerPrefs.GetInt("jet");
 
-        if(jetupgrade == 0)
+        jetupgrade = PlayerPrefs.GetInt("runupgrade");
+        Debug.Log(jetupgrade);
+
+        if (jetupgrade == 0)
         {
             cost = 6;
 
@@ -26,7 +27,7 @@ public class TextBuy : MonoBehaviour
 
             ScoresText.text = a;
 
-            PlayerPrefs.SetInt("cost", cost);
+            PlayerPrefs.SetInt("costrunupgrade", cost);
         }
 
         else
@@ -37,18 +38,20 @@ public class TextBuy : MonoBehaviour
                 start.SetActive(false);
                 starts.SetActive(true);
             }
-            if (z == 1 && jetupgrade == 10)
-            {
-                start.SetActive(false);
-                starts.SetActive(true);
-            }
-            if (z == 2 && jetupgrade == 15)
-            {
-               start.SetActive(false);
-               starts.SetActive(true);
-            }
+            //if (z == 1 && jetupgrade == 10)
+            //{
+            //    start.SetActive(false);
+            //    starts.SetActive(true);
+            //}
+            //if (z == 2 && jetupgrade == 15)
+            //{
+            //    start.SetActive(false);
+            //    starts.SetActive(true);
+            //}
             else
             {
+                float timer = PlayerPrefs.GetFloat("run");
+
                 cost = jetupgrade + 2;
 
                 cost = cost * 13;
@@ -58,8 +61,10 @@ public class TextBuy : MonoBehaviour
                 a = a + " $";
 
                 ScoresText.text = a;
-                PlayerPrefs.SetInt("cost", cost);
-           }
+                PlayerPrefs.SetInt("costrunupgrade", cost);
+            }
+            
+            
         }
     }
 }

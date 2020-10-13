@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Advertisements;
+
 
 
 
 public class AdPanel : MonoBehaviour
 {
-
     string gameId = "3612705";
     bool testMode = false;
 
