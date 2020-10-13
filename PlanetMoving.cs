@@ -4,26 +4,18 @@ using UnityEngine;
 
 public class PlanetMoving : MonoBehaviour
 {
-    float Speed = PlayerPrefs.GetFloat("Speed");
+    float Speed;
 
     void Update()
     {
+
         Speed = PlayerPrefs.GetFloat("Speed");
+        Speed += 0.0005f;
 
         transform.Translate(new Vector3(-Speed * Time.deltaTime, 0, 0));
+        PlayerPrefs.SetFloat("Speed", Speed);
     }
-    void OnTriggerEnter2D(Collider2D col)
-    {
+   
 
-        if (col.tag == "Accelerator")
-        {
-            Speed += 0.5f;
-
-            PlayerPrefs.SetFloat("Speed", Speed);
-
-        }
-
-       
-    }
 
 }

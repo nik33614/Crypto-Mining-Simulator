@@ -24,6 +24,39 @@ public class Score : MonoBehaviour
        
 
         int m = Mathf.RoundToInt(timer);
+        if(m == 10)
+        {
+            int z = PlayerPrefs.GetInt("10");
+            if (z == 0)
+            {
+                z += 1;
+                PlayerPrefs.SetInt("10", z);
+            }
+        }
+
+        if (m == 250)
+        {
+
+            int z = PlayerPrefs.GetInt("100");
+            if (z == 0)
+            {
+                z += 1;
+                PlayerPrefs.SetInt("100", z);
+            }
+        }
+
+        if (m == 500)
+        {
+            int z = PlayerPrefs.GetInt("250");
+            if (z == 0)
+            {
+                z += 1;
+                PlayerPrefs.SetInt("250", z);
+            }
+        }
+
+
+
 
         PlayerPrefs.SetInt("scorenow", m);
 
