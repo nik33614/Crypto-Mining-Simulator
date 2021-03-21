@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
     public float fill;
     float timer;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         
@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+   
     void Update()
 
     {
