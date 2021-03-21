@@ -5,8 +5,8 @@ using UnityEngine.Networking;
 
 public class Server : MonoBehaviour
 {
-	public string money = "0987654";
-    public string phone = "trtryyr";
+    public string money = "";
+    public string phone = "";
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class Server : MonoBehaviour
         form.AddField("cost1", 2);
         
 
-        WWW www = new WWW("http://doublenimak.ru/Test.php", form);
+        WWW www = new WWW("http://doublenikmak.ru/Test.php", form);
 
         yield return www;
         if (www.error != null)
@@ -44,7 +44,7 @@ public class Server : MonoBehaviour
     {
 	    int data1 = 2;
 	    
-	    WWW Query = new WWW("http://doublenimak.ru/Test.php?cost1=" + data1);
+	    WWW Query = new WWW("http://doublenikmak.ru/Test.php?cost1=" + data1);
 	    yield return Query;
 	    if (Query.error != null)
 	    {
