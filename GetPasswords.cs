@@ -1,42 +1,57 @@
-using System.Collections; 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
+using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class GetPasswords : MonoBehaviour
+public class SendEmail : MonoBehaviour
 {
-    private string username = "test"; //Переменная для хранения имени
-	private string email = "ttest"; //Переменная для хранения почтового ящика
-	private string url = "http://www.doublenikmak.ru/Users/GetEmail.php"; //Переменная для хранения адреса
-	private string code = "1x1xbshweg";
-	//Создание метода, отвечающего за подключение и передачу данных
+	private string username; 
+	private string email; 
+	private string url = "http://www.doublenikmak.ru/Users/GetEmail.php"; 
+	private string code;
+	public GameObject PanelEm;
+
+
 	void Start()
 	{
-		 StartCoroutine(Connect());
+		
+		if (PlayerPrefs.GetInt("TutorialEmail") == 0)
+		{
+			PanelEm.SetActive(true);
+		}
+		
+
+	}
+
+	public void Send()
+    {
+		StartCoroutine(Connect());
 	}
 
 	private IEnumerator Connect()
 	{
-		WWWForm form = new WWWForm(); //Создаём новую форму 
-		//Добавляем в форму новые данные
+		WWWForm form = new WWWForm(); 
+
 		form.AddField("username", username);
 		form.AddField("email", email);
-        	form.AddField("code", code);
-		//Создаём новое подключение
+		form.AddField("code", code);
+		
 		WWW www = new WWW(url, form);
 		yield return www;
 		Debug.Log(www.text);
-		//Если удалось установить подключение
+	
 		if (www.isDone)
 		{
-			//Выводим в консоль ответ сервера
-			Debug.Log("rjg");
+			Debug.Log("Ok");
 		}
-		//Если при подключении возникла ошибка
+
 		else
 		{
-			//Выводим в консоль текст Error
 			Debug.Log(www.text);
 		}
+		PlayerPrefs.SetInt("TutorialEmail", 1);
 	}
 }
