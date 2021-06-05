@@ -1,27 +1,37 @@
-using System.Collections; 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BanInfo : MonoBehaviour
 {
     int code;
+    public int level;
+    
+    string answer;
+
+    void Start()
+    {
+        StartCoroutine(Ban());
+        
+        
+    }
+
     private IEnumerator Ban()
     {
         code = PlayerPrefs.GetInt("code");
         WWWForm form = new WWWForm();
-        WWWForm form2 = new WWWForm();
-        form.AddField("code", code);
-        public GameObject Panel;
-        public GameObject PanelBan;
+        form.AddField("code", code.ToString());
 
-        WWW www = new WWW("http://doublenikmak.ru/User/Ban.php", form);
+
+        WWW www = new WWW("http://doublenikmak.ru/Users/Ban.php", form);
 
         yield return www;
         if (www.error != null)
         {
 
-            Debug.Log("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°: " + www.error);
+            Debug.Log("Произошла ошибка: " + www.error);
             yield break;
 
 
@@ -30,23 +40,25 @@ public class BanInfo : MonoBehaviour
         else
         {
             answer = www.text;
-            PlayerPrefs.SetInt("ban",ToInt(answer));
-            
-            
+            PlayerPrefs.SetInt("ban", Convert.ToInt32(answer));
+
+
             Debug.Log(www.text);
 
         }
-    }
-    void Start()
-    {
-        StartCoroutine(Ban());
-        if(PlayerPrefs.GetInt("ban") == 2)
+
+        if (PlayerPrefs.GetInt("ban") == 2 && PlayerPrefs.GetInt("TutorialEmail") != 0)
         {
-            Panel.SetActive(true);
+            
+                Application.LoadLevel(level);
+            
+                
+            
         }
-        if(PlayerPrefs.GetInt("ban") == 3)
+        if (PlayerPrefs.GetInt("ban") == 3)
         {
-            PanelBan.SetActive(true);
+            Application.LoadLevel(33);
         }
+
     }
 }

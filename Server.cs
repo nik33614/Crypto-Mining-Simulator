@@ -2,65 +2,138 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Server : MonoBehaviour
 {
-    public string money = "";
-    public string phone = "";
+	string name ;
+    int money;
+    string answer;
+    public UnityEngine.UI.Text PlaceText;
+    int tutorial;
+    public Text Inputfield;
+    public int scene;
+    public GameObject Panel;
+    public Text text;
 
     void Start()
     {
-        StartCoroutine(GET());
-        StartCoroutine(Vovod());
+        //PlayerPrefs.SetString("name", "");
+       // PlayerPrefs.SetInt("Tutorial", 0);
+        if (PlayerPrefs.GetInt("Tutorial") == 1)
+        {
+            StartCoroutine(Send());
+        }
+        else
+        {
+            Panel.SetActive(true);
+        }
+        
     }
    
-    private IEnumerator Vovod()
+    public void CheckString()
     {
-        WWWForm form = new WWWForm();
-        form.AddField("cost1", 2);
+        name = Inputfield.text;
         
+        
+    }
 
-        WWW www = new WWW("http://doublenikmak.ru/Test.php", form);
+    public void Check()
+    {
+        PlayerPrefs.SetString("name", name);
+        StartCoroutine(Checks());
+    }
+
+    private IEnumerator Send()
+    {
+        tutorial = PlayerPrefs.GetInt("Tutorial");
+        name  = PlayerPrefs.GetString("name");
+        money = PlayerPrefs.GetInt("balancedollars");
+        WWWForm form = new WWWForm();
+        form.AddField("name", name);
+        form.AddField("money", money);
+        form.AddField("tutorial", tutorial);
+        WWW www = new WWW("http://doublenikmak.ru/Leaderboard/Leaderboard.php", form);
 
         yield return www;
         if (www.error != null)
         {
-
             Debug.Log("Произошла ошибка: " + www.error);
             yield break;
-
-
         }
-
         else
         {
-
-            Debug.Log(www.text);
-
+            answer = www.text;
+            if(answer == "True" && tutorial == 0)
+            {
+                Debug.Log("This name is already exsisted");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Tutorial", 1);
+                PlayerPrefs.SetString("name", name);
+                //Debug.Log(answer);
+                if (answer == "")
+                {
+                    PlayerPrefs.SetInt("Leaderboard", 75); // can not convert null
+                    PlaceText.text = PlayerPrefs.GetInt("Leaderboard").ToString();
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("Leaderboard", Convert.ToInt32(answer)); // can not convert null
+                    PlaceText.text = PlayerPrefs.GetInt("Leaderboard").ToString();
+                }
+            }
         }
     }
 
-    public IEnumerator GET()
+    private IEnumerator Checks()
     {
-	    int data1 = 2;
-	    
-	    WWW Query = new WWW("http://doublenikmak.ru/Test.php?cost1=" + data1);
-	    yield return Query;
-	    if (Query.error != null)
-	    {
-		    Debug.Log("Server does not respond : " + Query.error);
-	    }
-	    else
-	    {
-		    if (Query.text != null) // что нам должен ответить сервер на наши данные
-		    {
-			    Debug.Log("Server responded correctly");
-		    }
-		    else
-		    {
-		    	Debug.Log("Server responded : " + Query.text);
-		    }
-	    }
-	    Query.Dispose();
-	}
+        tutorial = PlayerPrefs.GetInt("Tutorial");
+        name = PlayerPrefs.GetString("name");
+        money = PlayerPrefs.GetInt("balancedollars");
+        WWWForm form = new WWWForm();
+        form.AddField("name", name);
+        form.AddField("money", money);
+        form.AddField("tutorial", tutorial);
+        WWW www = new WWW("http://doublenikmak.ru/Leaderboard/Leaderboard.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("Произошла ошибка: " + www.error);
+            yield break;
+        }
+        else
+        {
+            answer = www.text;
+            if (answer == "True" && tutorial == 0)
+            {
+                text.text = "This name is already exsisted";
+                //Debug.Log("This name is already exsisted");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Tutorial", 1);
+                PlayerPrefs.SetString("name", name);
+                //Debug.Log(answer);
+                if(answer == "")
+                {
+                    PlayerPrefs.SetInt("Leaderboard", 75); // can not convert null
+                    PlaceText.text = PlayerPrefs.GetInt("Leaderboard").ToString();
+                }
+                else
+                {
+                    PlayerPrefs.SetInt("Leaderboard", Convert.ToInt32(answer));
+                    PlaceText.text = PlayerPrefs.GetInt("Leaderboard").ToString();
+                }
+                
+
+                SceneManager.LoadScene(scene);
+
+            }
+        }
+    }
 }
