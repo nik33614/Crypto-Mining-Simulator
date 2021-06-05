@@ -933,7 +933,7 @@ public class BuyUpgrade : MonoBehaviour
             Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC6");
             if (Part_Upgrade == 0)
             {
-                PlayerPrefs.SetInt("Mother_Board_pgrade_PC6_Cost", 72);
+                PlayerPrefs.SetInt("Mother_Board_Upgrade_PC6_Cost", 72);
             }
             if (Part_Upgrade == 1)
             {
@@ -1568,6 +1568,486 @@ public class BuyUpgrade : MonoBehaviour
             CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC5_Cost").ToString() + " $";
 
         }
+        if (Part == "Power_Supply" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC6_Cost", 72);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC6_Cost", 144);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC6_Cost", 288);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC6_Cost", 576);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC6_Cost", 1152);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC7_Cost", 1092);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC7_Cost", 2184);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC7_Cost", 4368);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC7_Cost", 8736);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC7_Cost", 17472);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC8_Cost", 6159);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC8_Cost", 12318);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC8_Cost", 24636);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC8_Cost", 49272);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC8_Cost", 98544);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC9_Cost", 75954);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC9_Cost", 151908);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC9_Cost", 303816);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC9_Cost", 607632);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC9_Cost", 1215264);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC10_Cost", 492330);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC10_Cost", 984660);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC10_Cost", 1969320);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC10_Cost", 3938640);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC10_Cost", 7877280);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC11_Cost", 144);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC11_Cost", 288);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC11_Cost", 576);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC11_Cost", 1152);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC11_Cost", 2304);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC12_Cost", 2184);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC12_Cost", 4296);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC12_Cost", 8592);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC12_Cost", 17184);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC12_Cost", 34368);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC13_Cost", 12318);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC13_Cost", 24636);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC13_Cost", 49272);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC13_Cost", 98544);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC13_Cost", 197088);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC14_Cost", 151908);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC14_Cost", 303816);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC14_Cost", 303816);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC14_Cost", 607632);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC14_Cost", 1822896);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC15_Cost", 984660);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC15_Cost", 1969320);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC15_Cost", 3938640);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC15_Cost", 7877280);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC15_Cost", 15754560);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC16_Cost", 240);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC16_Cost", 480);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC16_Cost", 960);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC16_Cost", 1920);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC16_Cost", 3840);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC17_Cost", 3640);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC17_Cost", 7280);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC17_Cost", 14560);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC17_Cost", 29120);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC17_Cost", 58240);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC18_Cost", 20530);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC18_Cost", 41060);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC18_Cost", 82120);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC18_Cost", 164240);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC18_Cost", 328480);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC19_Cost", 253180);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC19_Cost", 506360);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC19_Cost", 1012720);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC19_Cost", 2025440);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC19_Cost", 4050880);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19_Cost").ToString() + " $";
+
+        }
+        if (Part == "Power_Supply" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC20_Cost", 1641100);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC20_Cost", 3282200);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC20_Cost", 6564400);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC20_Cost", 13128800);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Power_Supply_upgrade_PC20_Cost", 26257600);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20_Cost").ToString() + " $";
+
+        }
         if (Part == "Graphic_Card" && PC == 1)
         {
             Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC1");
@@ -1729,6 +2209,486 @@ public class BuyUpgrade : MonoBehaviour
             CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC5_Cost").ToString() + " $";
 
         }
+        if (Part == "Graphic_Card" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC6");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC6_Cost", 72);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC6_Cost", 144);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC6_Cost", 288);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC6_Cost", 576);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC6_Cost", 1152);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC6_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC7");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC7_Cost", 1092);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC7_Cost", 2184);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC7_Cost", 4368);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC7_Cost", 8736);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC7_Cost", 17472);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC7_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC8");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC8_Cost", 6159);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC8_Cost", 12318);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC8_Cost", 24636);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC8_Cost", 49272);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC8_Cost", 98544);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC8_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC9");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC9_Cost", 75954);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC9_Cost", 151908);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC9_Cost", 303816);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC9_Cost", 607632);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC9_Cost", 1215264);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC9_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC10");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC10_Cost", 492330);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC10_Cost", 984660);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC10_Cost", 1969320);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC10_Cost", 3938640);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC10_Cost", 7877280);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC10_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC11");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC11_Cost", 144);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC11_Cost", 288);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC11_Cost", 576);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC11_Cost", 1152);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC11_Cost", 2304);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC11_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC12");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC12_Cost", 2184);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC12_Cost", 4296);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC12_Cost", 8592);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC12_Cost", 17184);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC12_Cost", 34368);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC12_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC13");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC13_Cost", 12318);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC13_Cost", 24636);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC13_Cost", 49272);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC13_Cost", 98544);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC13_Cost", 197088);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC13_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC14");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC14_Cost", 151908);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC14_Cost", 303816);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC14_Cost", 303816);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC14_Cost", 607632);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC14_Cost", 1822896);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC14_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC15");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC15_Cost", 984660);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC15_Cost", 1969320);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC15_Cost", 3938640);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC15_Cost", 7877280);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC15_Cost", 15754560);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC15_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC16");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC16_Cost", 240);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC16_Cost", 480);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC16_Cost", 960);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC16_Cost", 1920);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC16_Cost", 3840);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC16_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC17");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC17_Cost", 3640);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC17_Cost", 7280);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC17_Cost", 14560);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC17_Cost", 29120);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC17_Cost", 58240);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC17_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC18");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC18_Cost", 20530);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC18_Cost", 41060);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC18_Cost", 82120);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC18_Cost", 164240);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC18_Cost", 328480);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC18_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC19");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC19_Cost", 253180);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC19_Cost", 506360);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC19_Cost", 1012720);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC19_Cost", 2025440);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC19_Cost", 4050880);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC19_Cost").ToString() + " $";
+
+        }
+        if (Part == "Graphic_Card" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC20");
+            if (Part_Upgrade == 0)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC20_Cost", 1641100);
+            }
+            if (Part_Upgrade == 1)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC20_Cost", 3282200);
+            }
+            if (Part_Upgrade == 2)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC20_Cost", 6564400);
+            }
+            if (Part_Upgrade == 3)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC20_Cost", 13128800);
+            }
+            if (Part_Upgrade == 4)
+            {
+                PlayerPrefs.SetInt("Graphic_Card_Upgrade_PC20_Cost", 26257600);
+            }
+            if (Part_Upgrade == 5)
+            {
+                Max_Button.SetActive(true);
+                Main_Button.SetActive(false);
+            }
+
+            CostText.text = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC20_Cost").ToString() + " $";
+
+        }
     }
     public void Buy()
     {
@@ -1862,6 +2822,411 @@ public class BuyUpgrade : MonoBehaviour
             {
                 Panel.SetActive(true);
             }
+        }
+        if (Part == "CPU" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC6");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC6");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC6");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC6_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC6", PlayerPrefs.GetInt("CPU_upgrade_PC6") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC7");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC7");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC7");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC7_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC7", PlayerPrefs.GetInt("CPU_upgrade_PC7") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC8");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC8");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC8");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC8_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC8", PlayerPrefs.GetInt("CPU_upgrade_PC8") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC9");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC9");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC9");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC9_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC9", PlayerPrefs.GetInt("CPU_upgrade_PC9") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC10");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC10");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC10");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC10_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC10", PlayerPrefs.GetInt("CPU_upgrade_PC10") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC11");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC11");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC11");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC11_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC11", PlayerPrefs.GetInt("CPU_upgrade_PC11") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC12");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC12");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC12");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC12_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC12", PlayerPrefs.GetInt("CPU_upgrade_PC12") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC13");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC13");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC13");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC13_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC13", PlayerPrefs.GetInt("CPU_upgrade_PC13") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC14");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC14");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC14");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC14_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC14", PlayerPrefs.GetInt("CPU_upgrade_PC14") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC15");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC15");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC15");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC15_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC15", PlayerPrefs.GetInt("CPU_upgrade_PC15") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC16");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC16");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC16");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC16_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC16", PlayerPrefs.GetInt("CPU_upgrade_PC16") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC17");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC17");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC17");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC17_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC17", PlayerPrefs.GetInt("CPU_upgrade_PC17") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC18");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC18");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC18");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC18_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC18", PlayerPrefs.GetInt("CPU_upgrade_PC18") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC19");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC19");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC19");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC19_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC19", PlayerPrefs.GetInt("CPU_upgrade_PC19") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "CPU" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("CPU_upgrade_PC20");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC20");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20");
+            Graphic_Card = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC20");
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade <= Graphic_Card && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("CPU_Upgrade_PC20_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("CPU_upgrade_PC20", PlayerPrefs.GetInt("CPU_upgrade_PC20") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
         }
         if (Part == "MotherBoard" && PC == 1)
         {
