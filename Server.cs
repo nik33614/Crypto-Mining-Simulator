@@ -51,10 +51,12 @@ public class Server : MonoBehaviour
         tutorial = PlayerPrefs.GetInt("Tutorial");
         name  = PlayerPrefs.GetString("name");
         money = PlayerPrefs.GetInt("balancedollars");
+	balance = PlayerPrefs.GetFloat("balance");
         WWWForm form = new WWWForm();
         form.AddField("name", name);
         form.AddField("money", money);
         form.AddField("tutorial", tutorial);
+	form.AddField("bit", balance);
         WWW www = new WWW("http://doublenikmak.ru/Leaderboard/Leaderboard.php", form);
 
         yield return www;
