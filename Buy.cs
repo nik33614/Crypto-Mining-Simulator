@@ -11,19 +11,28 @@ public class Buy : MonoBehaviour
     string PCProfitSec = "profitsec";
     public float PCProfitSecInt;
     public int scene;
-
+    public string OurPC;
+    public GameObject Panel;
     public void BuyComputer()
     {
-        int money = PlayerPrefs.GetInt("balancedollars");
-        if(money >= Cost)
+        PlayerPrefs.SetInt("AlwaysOne", 1);
+        if(PlayerPrefs.GetInt(OurPC) == 1)
         {
-            PlayerPrefs.SetInt(PC, 1);
-            PlayerPrefs.SetInt("balancedollars", money - Cost);
-            PlayerPrefs.SetFloat(PCProfitSec, PCProfitSecInt);
+            int money = PlayerPrefs.GetInt("balancedollars");
+            if(money >= Cost)
+            {
+               PlayerPrefs.SetInt(PC, 1);
+               PlayerPrefs.SetInt("balancedollars", money - Cost);
+               PlayerPrefs.SetFloat(PCProfitSec, PCProfitSecInt);
+            }
+            else
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
         else
         {
-            SceneManager.LoadScene(scene);
+            Panel.SetActive(true);
         }
     }
 }
