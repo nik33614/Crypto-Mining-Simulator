@@ -26,8 +26,12 @@ public class SendEmail : MonoBehaviour
                 int Randomem = Random.Range(1000000, 9999999);
                 PlayerPrefs.SetInt("code", Randomem);
             }
+            
             PanelEm.SetActive(true);
+            StartCoroutine(PostCoroutine());
         }
+        
+         
 
 
     }
@@ -41,6 +45,34 @@ public class SendEmail : MonoBehaviour
     public void Send()
     {
         StartCoroutine(Connect());
+    }
+    
+    private IEnumerator PostCoroutine()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("code", PlayerPrefs.GetInt("code"));
+
+
+        WWW www = new WWW("http://doublenikmak.ru/CheckEm.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("Произошла ошибка: " + www.error);
+            yield break;
+        }
+
+        else
+        {
+
+            
+            if(1 == Int32.Parse(www.text)))
+            {
+                PanelEm.SetActive(false);
+                PlayerPrefs.SetInt("TutorialEmail", 1);
+            }
+
+        }
     }
 
     private IEnumerator Connect()
