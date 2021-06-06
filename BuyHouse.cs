@@ -10,18 +10,28 @@ public class BuyHouse : MonoBehaviour
     public int scene;
     public GameObject Max;
     public GameObject Button;
-
+    public GmeObject Panel;
+    public string Ourhouse;
+    
     public void BuySth()
     {
-        int money = PlayerPrefs.GetInt("balancedollars");
-        if (money >= Cost)
+        PlayerPrefs.SetInt("Alwaysone", 1);
+        if(PlayerPrefs.GetInt(Ourhouse == 1))
         {
-            PlayerPrefs.SetInt(House, 1);
-            PlayerPrefs.SetInt("balancedollars", money - Cost);
+            int money = PlayerPrefs.GetInt("balancedollars");
+               if (money >= Cost)
+            {
+                PlayerPrefs.SetInt(House, 1);
+                PlayerPrefs.SetInt("balancedollars", money - Cost);
+            }
+            else
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
         else
         {
-            SceneManager.LoadScene(scene);
+            Panel.SetActive(true);
         }
     }
     void Update()
