@@ -3348,6 +3348,366 @@ public class BuyUpgrade : MonoBehaviour
             }
 
         }
+        if (Part == "MotherBoard" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC6");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC6_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC6", PlayerPrefs.GetInt("Mother_Board_upgrade_PC6") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC7");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC7_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC7", PlayerPrefs.GetInt("Mother_Board_upgrade_PC7") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC8");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC8_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC8", PlayerPrefs.GetInt("Mother_Board_upgrade_PC8") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC9");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC9_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC9", PlayerPrefs.GetInt("Mother_Board_upgrade_PC9") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC10");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC10_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC10", PlayerPrefs.GetInt("Mother_Board_upgrade_PC10") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC11");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC11_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC11", PlayerPrefs.GetInt("Mother_Board_upgrade_PC11") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC12");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC12_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC12", PlayerPrefs.GetInt("Mother_Board_upgrade_PC12") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC13");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC13_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC13", PlayerPrefs.GetInt("Mother_Board_upgrade_PC13") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC14");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC14_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC14", PlayerPrefs.GetInt("Mother_Board_upgrade_PC14") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC15");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC15_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC15", PlayerPrefs.GetInt("Mother_Board_upgrade_PC15") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC16");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC16_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC16", PlayerPrefs.GetInt("Mother_Board_upgrade_PC16") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC17");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC17_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC17", PlayerPrefs.GetInt("Mother_Board_upgrade_PC17") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC18");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC18_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC18", PlayerPrefs.GetInt("Mother_Board_upgrade_PC18") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC19");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC19_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC19", PlayerPrefs.GetInt("Mother_Board_upgrade_PC19") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "MotherBoard" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Mother_Board_upgrade_PC20");
+            if (Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Mother_Board_Upgrade_PC20_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Mother_Board_upgrade_PC20", PlayerPrefs.GetInt("Mother_Board_upgrade_PC20") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
         if (Part == "Power_Supply" && PC == 1)
         {
             Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC1");
@@ -3463,6 +3823,381 @@ public class BuyUpgrade : MonoBehaviour
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Power_Supply_upgrade_PC5", PlayerPrefs.GetInt("Power_Supply_upgrade_PC5") + 1);
                     PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.03374f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC6");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC6", PlayerPrefs.GetInt("Power_Supply_upgrade_PC6") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC7");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC7", PlayerPrefs.GetInt("Power_Supply_upgrade_PC7") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC8");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC8", PlayerPrefs.GetInt("Power_Supply_upgrade_PC8") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC9");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC9", PlayerPrefs.GetInt("Power_Supply_upgrade_PC9") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC10");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC10", PlayerPrefs.GetInt("Power_Supply_upgrade_PC10") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC11");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC11", PlayerPrefs.GetInt("Power_Supply_upgrade_PC11") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC12");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC12", PlayerPrefs.GetInt("Power_Supply_upgrade_PC12") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC13");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC13", PlayerPrefs.GetInt("Power_Supply_upgrade_PC13") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC14");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC14", PlayerPrefs.GetInt("Power_Supply_upgrade_PC14") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC15");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC15", PlayerPrefs.GetInt("Power_Supply_upgrade_PC15") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC16");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC16", PlayerPrefs.GetInt("Power_Supply_upgrade_PC16") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC17");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC17", PlayerPrefs.GetInt("Power_Supply_upgrade_PC17") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC18");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC18", PlayerPrefs.GetInt("Power_Supply_upgrade_PC18") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC19");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC19", PlayerPrefs.GetInt("Power_Supply_upgrade_PC19") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+        }
+        if (Part == "Power_Supply" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC20");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Power_Supply_upgrade_PC20", PlayerPrefs.GetInt("Power_Supply_upgrade_PC20") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
                 }
                 else
                 {
@@ -3610,6 +4345,412 @@ public class BuyUpgrade : MonoBehaviour
             }
 
         }
+        if (Part == "Graphic_Card" && PC == 6)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC6");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC6");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC6");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC6_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC6", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC6") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 7)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC7");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC7");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC7");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC7_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC7", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC7") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 8)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC8");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC8");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC8");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC8_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC8", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC8") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 9)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC9");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC9");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC9");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC9_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC9", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC9") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 10)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC10");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC10");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC10");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC10_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC10", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC10") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 11)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC11");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC11");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC11");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC11_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC11", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC11") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 12)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC12");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC12");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC12");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC12_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC12", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC12") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 13)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC13");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC13");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC13");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC13_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC13", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC13") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 14)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC14");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC14");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC14");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC14_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC14", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC14") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 15)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC15");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC15");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC15");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC15_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC15", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC15") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 16)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC16");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC16");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC16");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC16_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC16", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC16") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 17)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC17");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC17");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC17");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC17_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC17", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC17") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 18)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC18");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC18");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC18");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC18_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC18", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC18") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 19)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC19");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC19");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC19");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC19_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC19", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC19") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+        if (Part == "Graphic_Card" && PC == 20)
+        {
+            Part_Upgrade = PlayerPrefs.GetInt("Graphic_Card_upgrade_PC20");
+            MotherBoard = PlayerPrefs.GetInt("Mother_Board_upgrade_PC20");
+            Power_Supply = PlayerPrefs.GetInt("Power_Supply_upgrade_PC20");
+
+            if (Part_Upgrade <= MotherBoard && Part_Upgrade <= Power_Supply && Part_Upgrade < 5)
+            {
+                money = PlayerPrefs.GetInt("balancedollars");
+                Cost = PlayerPrefs.GetInt("Graphic_Card_Upgrade_PC20_Cost");
+                if (money >= Cost)
+                {
+                    PlayerPrefs.SetInt("balancedollars", money -= Cost);
+                    PlayerPrefs.SetInt("Graphic_Card_upgrade_PC20", PlayerPrefs.GetInt("Graphic_Card_upgrade_PC20") + 1);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                }
+                else
+                {
+                    SceneManager.LoadScene(scene);
+                }
+            }
+            else
+            {
+                Panel.SetActive(true);
+            }
+
+        }
+
 
     }
 }
