@@ -2864,7 +2864,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC7", PlayerPrefs.GetInt("CPU_upgrade_PC7") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00042f);
                 }
                 else
                 {
@@ -2891,7 +2891,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC8", PlayerPrefs.GetInt("CPU_upgrade_PC8") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0015f);
                 }
                 else
                 {
@@ -2918,7 +2918,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC9", PlayerPrefs.GetInt("CPU_upgrade_PC9") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.01536f);
                 }
                 else
                 {
@@ -2945,7 +2945,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC10", PlayerPrefs.GetInt("CPU_upgrade_PC10") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.10122f);
                 }
                 else
                 {
@@ -2999,7 +2999,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC12", PlayerPrefs.GetInt("CPU_upgrade_PC12") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00084f);
                 }
                 else
                 {
@@ -3026,7 +3026,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC13", PlayerPrefs.GetInt("CPU_upgrade_PC13") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.003f);
                 }
                 else
                 {
@@ -3053,7 +3053,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC14", PlayerPrefs.GetInt("CPU_upgrade_PC14") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.03f);
                 }
                 else
                 {
@@ -3080,7 +3080,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC15", PlayerPrefs.GetInt("CPU_upgrade_PC15") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.202f);
                 }
                 else
                 {
@@ -3107,7 +3107,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC16", PlayerPrefs.GetInt("CPU_upgrade_PC16") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0014f);
                 }
                 else
                 {
@@ -3134,7 +3134,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC17", PlayerPrefs.GetInt("CPU_upgrade_PC17") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0014f);
                 }
                 else
                 {
@@ -3161,7 +3161,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC18", PlayerPrefs.GetInt("CPU_upgrade_PC18") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0051f);
                 }
                 else
                 {
@@ -3188,7 +3188,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC19", PlayerPrefs.GetInt("CPU_upgrade_PC19") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0512f);
                 }
                 else
                 {
@@ -3215,7 +3215,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("CPU_upgrade_PC20", PlayerPrefs.GetInt("CPU_upgrade_PC20") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.4148f);
                 }
                 else
                 {
@@ -3383,7 +3383,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC7", PlayerPrefs.GetInt("Mother_Board_upgrade_PC7") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00042f);
                 }
                 else
                 {
@@ -3407,7 +3407,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC8", PlayerPrefs.GetInt("Mother_Board_upgrade_PC8") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0015f);
                 }
                 else
                 {
@@ -3431,7 +3431,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC9", PlayerPrefs.GetInt("Mother_Board_upgrade_PC9") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.01536f);
                 }
                 else
                 {
@@ -3455,7 +3455,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC10", PlayerPrefs.GetInt("Mother_Board_upgrade_PC10") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.10122f);
                 }
                 else
                 {
@@ -3479,7 +3479,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC11", PlayerPrefs.GetInt("Mother_Board_upgrade_PC11") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00084f);
                 }
                 else
                 {
@@ -3503,7 +3503,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC12", PlayerPrefs.GetInt("Mother_Board_upgrade_PC12") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.003f);
                 }
                 else
                 {
@@ -3527,7 +3527,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC13", PlayerPrefs.GetInt("Mother_Board_upgrade_PC13") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.03f);
                 }
                 else
                 {
@@ -3551,7 +3551,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC14", PlayerPrefs.GetInt("Mother_Board_upgrade_PC14") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.202f);
                 }
                 else
                 {
@@ -3575,7 +3575,7 @@ public class BuyUpgrade : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("balancedollars", money -= Cost);
                     PlayerPrefs.SetInt("Mother_Board_upgrade_PC15", PlayerPrefs.GetInt("Mother_Board_upgrade_PC15") + 1);
-                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.00004f);
+                    PlayerPrefs.SetFloat("profitsec", PlayerPrefs.GetFloat("profitsec") + 0.0014f);
                 }
                 else
                 {
