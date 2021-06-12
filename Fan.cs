@@ -30,9 +30,6 @@ public class Cooler : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        Plus();
         int pc1 = PlayerPrefs.GetInt("pc1");
         int pc2 = PlayerPrefs.GetInt("pc2");
         int pc3 = PlayerPrefs.GetInt("pc3");
@@ -275,6 +272,11 @@ public class Cooler : MonoBehaviour
             }
         }
         Text = PlayerPrefs.GetInt("costfanupgrade").ToString();
+        
+        timer -= Time.deltaTime;
+
+        Plus();
+        
 
     }
 
@@ -283,7 +285,6 @@ public class Cooler : MonoBehaviour
         if (timer <= 0)
         {
             
-
             time_old = PlayerPrefs.GetInt("time1");
             time_double_new = DateTime.Now.Subtract(new DateTime(2021, 3, 4)).TotalSeconds;
             time_new = Convert.ToInt32(Math.Round(time_double_new, 0));
