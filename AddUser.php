@@ -12,5 +12,5 @@ fwrite($file, $money);
 fwrite($file, $bitcoin);
 fwrite($file, $profit);
 fclose($file);
-echo "ok";
+echo "+";
 ?>
