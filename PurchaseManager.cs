@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Purchasing;
-using System;
 
 public class PurchaseManager : MonoBehaviour, IStoreListener
 {
@@ -116,12 +114,21 @@ public class PurchaseManager : MonoBehaviour, IStoreListener
     {
         if (OnPurchaseConsumable != null) OnPurchaseConsumable(args);
         Debug.Log(C_PRODUCTS[currentProductIndex] + " Buyed!");
+
+
+
+        Debug.Log(args.purchasedProduct.defenition.id);
+
     }
     public delegate void OnSuccessNonConsumable(PurchaseEventArgs args);
     protected virtual void OnSuccessNC(PurchaseEventArgs args)
     {
         if (OnPurchaseNonConsumable != null) OnPurchaseNonConsumable(args);
         Debug.Log(NC_PRODUCTS[currentProductIndex] + " Buyed!");
+
+
+
+        Debug.Log(args.purchasedProduct.defenition.id);
     }
     public delegate void OnFailedPurchase(Product product, PurchaseFailureReason failureReason);
     protected virtual void OnFailedP(Product product, PurchaseFailureReason failureReason)
