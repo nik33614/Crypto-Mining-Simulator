@@ -7,6 +7,8 @@ public class Scroll : MonoBehaviour
 {
     public RectTransform Title;
 
+    public RectTransform Image_;
+
     public RectTransform content;
     int code;
     int type;
@@ -31,14 +33,23 @@ void Start()
         {
             var instance = GameObject.Instantiate(Title.gameObject) as GameObject;
             instance.transform.SetParent(content, false);
-            InitializeItemView(instance, model);
+
+            var instance_1 = GameObject.Instantiate(Image_.gameObject) as GameObject;
+            instance_1.transform.SetParent(content, false);
+            InitializeItemView(instance,instance_1, model);
         }
     }
 
-    void InitializeItemView (GameObject viewGameObject, TestItemModel model)
+    void InitializeItemView (GameObject viewGameObject,GameObject Image,TestItemModel model)
     {
         TestItemView view = new TestItemView(viewGameObject.transform);
-        view.titleText.text = model.title;//.Substring(1, 4);//model.title.Length
+        int len = model.title.Length;
+        
+        view.titleText.text = model.title.Substring(2,len-2);//.Substring(1, 4);//model.title.Length
+        if(model.title.Substring(0,1) == "0")
+        {
+            Image.SetActive(true);
+        }
     }
     IEnumerator GetInf(System.Action<TestItemModel[]> callback)
     {
@@ -63,7 +74,7 @@ void Start()
             var tmp = new List<string>(sub);
             tmp.RemoveAt(0); 
             subs  = tmp.ToArray(); 
-            count = subs.Length;
+            count = (subs.Length) - 1;
             var results = new TestItemModel[count];
             
             for (int i = 0; i < count; i++)
@@ -78,10 +89,12 @@ void Start()
     public class TestItemView
     {
         public Text titleText;
+       // public GameObject image;
         
         public TestItemView (Transform rootView)
         {
             titleText = rootView.Find("TitleText").GetComponent<Text>();
+            //image = rootView.Find("Image");
         }
     }
 
