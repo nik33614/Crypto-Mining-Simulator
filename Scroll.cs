@@ -10,24 +10,15 @@ public class Scroll : MonoBehaviour
     public RectTransform content;
     int code;
     int type;
+    int count;
     string[] subs;
     string[] sub;
     
 
 void Start()
 {
-    int modelsCount = 3;
-    StartCoroutine(GetInf(modelsCount, results => OnReceivedModels(results)));
-    
+    StartCoroutine(GetInf(results => OnReceivedModels(results)));
 }
-
-    public void UpdateItems ()
-    {
-        int modelsCount = 3;//subs.Length - 1
-        
-        
-        //StartCoroutine(GetItems(modelsCount, results => OnReceivedModels(results)));
-    }
 
     void OnReceivedModels (TestItemModel[] models)
     {
@@ -47,10 +38,9 @@ void Start()
     void InitializeItemView (GameObject viewGameObject, TestItemModel model)
     {
         TestItemView view = new TestItemView(viewGameObject.transform);
-        Debug.Log(model.title);
         view.titleText.text = model.title;//.Substring(1, 4);//model.title.Length
     }
-    IEnumerator GetInf(int count, System.Action<TestItemModel[]> callback)
+    IEnumerator GetInf(System.Action<TestItemModel[]> callback)
     {
         WWWForm form = new WWWForm();
         code = PlayerPrefs.GetInt("code");
@@ -69,45 +59,21 @@ void Start()
         else
         {
             string answer = www.text;
-
             sub = answer.Split('|');
             var tmp = new List<string>(sub);
             tmp.RemoveAt(0); 
             subs  = tmp.ToArray(); 
-            
+            count = subs.Length;
             var results = new TestItemModel[count];
             
             for (int i = 0; i < count; i++)
             {
-                
                 results[i] = new TestItemModel();
                 results[i].title = subs[i].ToString();
-                
             }
-            
-            
-            
-
             callback(results);
         }
-
     } 
-
-//    IEnumerator GetItems (int count, System.Action<TestItemModel[]> callback)
-//    {
-        
-//        var results = new TestItemModel[count];
-//        for (int i = 0; i < count; i++)
-//        {
-//            results[i] = new TestItemModel();
-//            results[i].title = subs[i].ToString();
-                
-//        }
-
-//        callback(results);
-//        return (results);
-        
-//    }
 
     public class TestItemView
     {
@@ -122,6 +88,5 @@ void Start()
     public class TestItemModel
     {
         public string title;
-        
     }
 }
