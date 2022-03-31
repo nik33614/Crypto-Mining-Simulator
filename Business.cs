@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections;//not ready!
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -67,13 +67,13 @@ public class Business : MonoBehaviour
 
 
     /// <summary>
-    /// отдельна таблица с бизнесами. в каждом бизнесе максимум 10 человек 
-    /// профит начи`
-    /// каждый день/час как и на работе начисляется зарплата, которая вычитается из капитала.если директор не заходит в игру юолее 3 дней, то профит перестает добавляться и бизнес уходит в минус
-    /// также происходит вывод
+    /// Г®ГІГ¤ГҐГ«ГјГ­Г  ГІГ ГЎГ«ГЁГ¶Г  Г± ГЎГЁГ§Г­ГҐГ±Г Г¬ГЁ. Гў ГЄГ Г¦Г¤Г®Г¬ ГЎГЁГ§Г­ГҐГ±ГҐ Г¬Г ГЄГ±ГЁГ¬ГіГ¬ 10 Г·ГҐГ«Г®ГўГҐГЄ 
+    /// ГЇГ°Г®ГґГЁГІ Г­Г Г·ГЁ`
+    /// ГЄГ Г¦Г¤Г»Г© Г¤ГҐГ­Гј/Г·Г Г± ГЄГ ГЄ ГЁ Г­Г  Г°Г ГЎГ®ГІГҐ Г­Г Г·ГЁГ±Г«ГїГҐГІГ±Гї Г§Г Г°ГЇГ«Г ГІГ , ГЄГ®ГІГ®Г°Г Гї ГўГ»Г·ГЁГІГ ГҐГІГ±Гї ГЁГ§ ГЄГ ГЇГЁГІГ Г«Г .ГҐГ±Г«ГЁ Г¤ГЁГ°ГҐГЄГІГ®Г° Г­ГҐ Г§Г ГµГ®Г¤ГЁГІ Гў ГЁГЈГ°Гі ГѕГ®Г«ГҐГҐ 3 Г¤Г­ГҐГ©, ГІГ® ГЇГ°Г®ГґГЁГІ ГЇГҐГ°ГҐГ±ГІГ ГҐГІ Г¤Г®ГЎГ ГўГ«ГїГІГјГ±Гї ГЁ ГЎГЁГ§Г­ГҐГ± ГіГµГ®Г¤ГЁГІ Гў Г¬ГЁГ­ГіГ±
+    /// ГІГ ГЄГ¦ГҐ ГЇГ°Г®ГЁГ±ГµГ®Г¤ГЁГІ ГўГ»ГўГ®Г¤
     /// 
-    /// меню в котором все игроки. Для каждого директор прокачивает комп. Игрок должен заходить в игру и играть в миниигру, чтобы получать экстра зароботок. Как и обычный комп сисетма охлажденичя. по умолчанию у игрока минимальный комп.
-    /// Такие же компы как и обычные, только цены намного вышеэ.
+    /// Г¬ГҐГ­Гѕ Гў ГЄГ®ГІГ®Г°Г®Г¬ ГўГ±ГҐ ГЁГЈГ°Г®ГЄГЁ. Г„Г«Гї ГЄГ Г¦Г¤Г®ГЈГ® Г¤ГЁГ°ГҐГЄГІГ®Г° ГЇГ°Г®ГЄГ Г·ГЁГўГ ГҐГІ ГЄГ®Г¬ГЇ. Г€ГЈГ°Г®ГЄ Г¤Г®Г«Г¦ГҐГ­ Г§Г ГµГ®Г¤ГЁГІГј Гў ГЁГЈГ°Гі ГЁ ГЁГЈГ°Г ГІГј Гў Г¬ГЁГ­ГЁГЁГЈГ°Гі, Г·ГІГ®ГЎГ» ГЇГ®Г«ГіГ·Г ГІГј ГЅГЄГ±ГІГ°Г  Г§Г Г°Г®ГЎГ®ГІГ®ГЄ. ГЉГ ГЄ ГЁ Г®ГЎГ»Г·Г­Г»Г© ГЄГ®Г¬ГЇ Г±ГЁГ±ГҐГІГ¬Г  Г®ГµГ«Г Г¦Г¤ГҐГ­ГЁГ·Гї. ГЇГ® ГіГ¬Г®Г«Г·Г Г­ГЁГѕ Гі ГЁГЈГ°Г®ГЄГ  Г¬ГЁГ­ГЁГ¬Г Г«ГјГ­Г»Г© ГЄГ®Г¬ГЇ.
+    /// Г’Г ГЄГЁГҐ Г¦ГҐ ГЄГ®Г¬ГЇГ» ГЄГ ГЄ ГЁ Г®ГЎГ»Г·Г­Г»ГҐ, ГІГ®Г«ГјГЄГ® Г¶ГҐГ­Г» Г­Г Г¬Г­Г®ГЈГ® ГўГ»ГёГҐГЅ.
     /// </summary>
 
     void Start()
@@ -294,7 +294,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -325,7 +325,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -342,14 +342,14 @@ public class Business : MonoBehaviour
         code = PlayerPrefs.GetInt("code");
         form.AddField("code", code);
         ///
-        ///ещё что то
+        ///ГҐГ№Вё Г·ГІГ® ГІГ®
 
         WWW www = new WWW("http://doublenikmak.ru/Dollars.php", form);//
 
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -370,7 +370,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -391,7 +391,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -413,7 +413,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -435,7 +435,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -457,7 +457,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -479,7 +479,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -501,7 +501,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -523,7 +523,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -545,7 +545,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -567,7 +567,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -589,7 +589,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -611,7 +611,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -686,7 +686,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -707,7 +707,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -728,7 +728,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
@@ -749,7 +749,7 @@ public class Business : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("ГЏГ°Г®ГЁГ§Г®ГёГ«Г  Г®ГёГЁГЎГЄГ : " + www.error);
             yield break;
         }
         else
