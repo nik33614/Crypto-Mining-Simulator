@@ -8,10 +8,22 @@ public class Get_bit : MonoBehaviour
     int balance;
     int code;
     float bit;
-   
+    float timer = 1f;
+
+    void Update()
+    {
+        timer -= Time.deltaTime;
+
+        Click();
+    }
+    
     public void Click()
     {
-        StartCoroutine(Send());
+        if (timer <= 0)
+        {
+            timer = 1f;
+            StartCoroutine(Send());
+        }
     }
 
     private IEnumerator Send()
@@ -37,7 +49,7 @@ public class Get_bit : MonoBehaviour
         }
         else
         {
-            Debug.Log("ok");
+            yield break;
         }
     }
 }
