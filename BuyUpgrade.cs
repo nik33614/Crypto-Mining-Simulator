@@ -553,7 +553,7 @@ public class BuyUpgrade : MonoBehaviour
             }
             if (Part_Upgrade == 1)
             {
-                PlayerPrefs.SetInt("CPU_Upgrade_PC14_Cost", 303816);
+                PlayerPrefs.SetInt("CPU_Upgrade_PC14_Cost", 302816);
             }
             if (Part_Upgrade == 2)
             {
@@ -565,7 +565,7 @@ public class BuyUpgrade : MonoBehaviour
             }
             if (Part_Upgrade == 4)
             {
-                PlayerPrefs.SetInt("CPU_Upgrade_PC14_Cost", 1822896);
+                PlayerPrefs.SetInt("CPU_Upgrade_PC14_Cost", 1522896);
             }
             if (Part_Upgrade == 5)
             {
@@ -597,7 +597,7 @@ public class BuyUpgrade : MonoBehaviour
             }
             if (Part_Upgrade == 4)
             {
-                PlayerPrefs.SetInt("CPU_Upgrade_PC15_Cost", 15754560);
+                PlayerPrefs.SetInt("CPU_Upgrade_PC15_Cost", 11754560);
             }
             if (Part_Upgrade == 5)
             {
