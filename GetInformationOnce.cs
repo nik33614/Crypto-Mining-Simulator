@@ -22,12 +22,38 @@ public class GetInformationOnce : MonoBehaviour
     
     void Start()
     {
-        if(PlayerPrefs.GetInt("Tutorial_Inf") == 0)
-       {
-           PlayerPrefs.SetInt("Tutorial_Inf", 1);
-            StartCoroutine(Send());
-            
-       }
+        StartCoroutine(PostCoroutine());
+    }
+
+    private IEnumerator PostCoroutine()
+    {
+        WWWForm form = new WWWForm();
+
+
+        form.AddField("code", PlayerPrefs.GetInt("code"));
+        WWW www = new WWW("http://doublenikmak.ru/Check_inf.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("Error: " + www.error);
+            yield break;
+        }
+
+        else
+        {
+
+            if ("1" == www.text)
+            {
+                PlayerPrefs.SetInt("Tutorial_Inf", 1);
+            }
+            else
+            {
+                StartCoroutine(Send());
+            }
+            //Debug.Log(www.text);
+            yield break;
+        }
     }
 
     private IEnumerator Send()
@@ -192,13 +218,14 @@ public class GetInformationOnce : MonoBehaviour
         yield return www;
         if (www.error != null)
         {
-            Debug.Log("Произошла ошибка: " + www.error);
+            Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + www.error);
             yield break;
         }
         else
         {
-           // Debug.Log(www.text);
+           
         }
+        yield break;
     }
 
 }
