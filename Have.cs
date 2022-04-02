@@ -74,7 +74,7 @@ public class Have : MonoBehaviour {
     {
         balance_coin = PlayerPrefs.GetFloat("balance");
         balance_dollars = PlayerPrefs.GetInt("balancedollars");
-        if(balance_coin >= (float)Coin_Exchange)
+        if(balance_coin >= (float)Coin_Exchange && money_exchange >= 0 && money_dollars >=0)
         {
             PlayerPrefs.SetFloat("balance", balance_coin - (float)Coin_Exchange);
 
