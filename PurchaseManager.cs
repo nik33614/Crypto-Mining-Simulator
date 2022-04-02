@@ -1,6 +1,8 @@
-using System;
+п»їusing System;
 using UnityEngine;
 using UnityEngine.Purchasing;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PurchaseManager : MonoBehaviour, IStoreListener
 {
@@ -8,33 +10,26 @@ public class PurchaseManager : MonoBehaviour, IStoreListener
     private static IExtensionProvider m_StoreExtensionProvider;
     private int currentProductIndex;
 
-    [Tooltip("Не многоразовые товары. Больше подходит для отключения рекламы и т.п.")]
+    int code;
+    int balance;
+    float bit;
+
     public string[] NC_PRODUCTS;
-    [Tooltip("Многоразовые товары. Больше подходит для покупки игровой валюты и т.п.")]
+  
     public string[] C_PRODUCTS;
 
-    /// <summary>
-    /// Событие, которое запускается при удачной покупке многоразового товара.
-    /// </summary>
+    
     public static event OnSuccessConsumable OnPurchaseConsumable;
-    /// <summary>
-    /// Событие, которое запускается при удачной покупке не многоразового товара.
-    /// </summary>
+    
     public static event OnSuccessNonConsumable OnPurchaseNonConsumable;
-    /// <summary>
-    /// Событие, которое запускается при неудачной покупке какого-либо товара.
-    /// </summary>
+   
     public static event OnFailedPurchase PurchaseFailed;
 
     private void Awake()
     {
         InitializePurchasing();
     }
-    /// <summary>
-    /// Проверить, куплен ли товар.
-    /// </summary>
-    /// <param name="id">Индекс товара в списке.</param>
-    /// <returns></returns>
+   
     public static bool CheckBuyState(string id)
     {
         Product product = m_StoreController.products.WithID(id);
@@ -114,10 +109,23 @@ public class PurchaseManager : MonoBehaviour, IStoreListener
     {
         if (OnPurchaseConsumable != null) OnPurchaseConsumable(args);
         Debug.Log(C_PRODUCTS[currentProductIndex] + " Buyed!");
+        
+        if (C_PRODUCTS[currentProductIndex]  == "dollars_10000")
+        {
+            PlayerPrefs.SetInt("balancedollars", PlayerPrefs.GetInt("balancedollars") + 10000);
+        }
+        if (C_PRODUCTS[currentProductIndex] == "dollars_50000")
+        {
+            PlayerPrefs.SetInt("balancedollars", PlayerPrefs.GetInt("balancedollars") + 50000);
+        }
+        if (C_PRODUCTS[currentProductIndex] == "dollars_300000")
+        {
+            PlayerPrefs.SetInt("balancedollars", PlayerPrefs.GetInt("balancedollars") + 300000);
+        }
 
-
-
-        Debug.Log(args.purchasedProduct.defenition.id);
+        StartCoroutine(Send());
+        StartCoroutine(Purchase_());
+        
 
     }
     public delegate void OnSuccessNonConsumable(PurchaseEventArgs args);
@@ -125,10 +133,13 @@ public class PurchaseManager : MonoBehaviour, IStoreListener
     {
         if (OnPurchaseNonConsumable != null) OnPurchaseNonConsumable(args);
         Debug.Log(NC_PRODUCTS[currentProductIndex] + " Buyed!");
-
-
-
-        Debug.Log(args.purchasedProduct.defenition.id);
+        if (NC_PRODUCTS[currentProductIndex] == "stop_ads")
+        {
+            PlayerPrefs.SetInt("stop_ads", 1);
+        }
+        StartCoroutine(Send_Ad());
+        StartCoroutine(Purchase_());
+        //Debug.Log(args.purchasedProduct.defenition.id);
     }
     public delegate void OnFailedPurchase(Product product, PurchaseFailureReason failureReason);
     protected virtual void OnFailedP(Product product, PurchaseFailureReason failureReason)
@@ -140,5 +151,77 @@ public class PurchaseManager : MonoBehaviour, IStoreListener
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
     {
         OnFailedP(product, failureReason);
+    }
+
+    private IEnumerator Send()
+    {
+
+        code = PlayerPrefs.GetInt("code");
+        balance = PlayerPrefs.GetInt("balancedollars");
+        bit = PlayerPrefs.GetFloat("balance");
+
+
+
+        WWWForm form = new WWWForm();
+        form.AddField("code", code);
+        form.AddField("balance", balance);
+        form.AddField("bitcoin", Math.Round(bit, 4).ToString());
+        WWW www = new WWW("http://doublenikmak.ru/Get_Money_Bit.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°: " + www.error);
+            yield break;
+        }
+        else
+        {
+            yield break;
+        }
+    }
+
+    private IEnumerator Send_Ad()
+    {
+
+        code = PlayerPrefs.GetInt("code");
+        
+        WWWForm form = new WWWForm();
+        form.AddField("code", code);
+        form.AddField("ad", "1");
+
+        WWW www = new WWW("http://doublenikmak.ru/Send_Ads.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°: " + www.error);
+            yield break;
+        }
+        else
+        {
+            yield break;
+        }
+    }
+
+private IEnumerator Purchase_()
+    {
+
+        code = PlayerPrefs.GetInt("code");
+        
+        WWWForm form = new WWWForm();
+        form.AddField("code", code);
+
+        WWW www = new WWW("http://doublenikmak.ru/Purchase.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("Error: " + www.error);
+            yield break;
+        }
+        else
+        {
+            yield break;
+        }
     }
 }
