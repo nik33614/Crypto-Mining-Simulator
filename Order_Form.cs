@@ -20,7 +20,7 @@ public class Order_Form : MonoBehaviour
         Slider_.maxValue = Slider_.maxValue = PlayerPrefs.GetInt("dollars")/PlayerPrefs.GetInt("price_share");
     }
 
-    void FixedUpdate()//получаем каждые 5 секунд цену акции больше - зеленая меньше - красная. цена для всех одинакова
+    void FixedUpdate()
    {
         timer -= Time.deltaTime;
         if(timer <= 0)
@@ -40,7 +40,7 @@ public class Order_Form : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//возвращение курса
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Get_Rate_Traiding.php", form);//+
 
         yield return www;
         if (www.error != null)
@@ -48,7 +48,7 @@ public class Order_Form : MonoBehaviour
             Debug.Log("Error: " + www.error);
             yield break;
         }
-        else
+        else // больше - зеленая меньше - красная. цена для всех одинакова
         {
             rate = Convert.ToInt32(www.text);
             if(rate > old_rate)
@@ -67,25 +67,29 @@ public class Order_Form : MonoBehaviour
     public void Exchange()
     {
         Slider_.maxValue = PlayerPrefs.GetInt("dollars") / PlayerPrefs.GetInt("price_share");
-        Should_Pay.text = Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share").ToString() + " $";
+        Should_Pay.text = (Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share")).ToString() + " $";
         to_pay = Convert.ToInt32(Math.Round(Slider_.value, 0))* PlayerPrefs.GetInt("price_share");
         num.text = Slider_.value.ToString();
     }
     public void Buy()
     {
-        if(PlayerPrefs.GetInt("dollars")>=(Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share"))
+        if(PlayerPrefs.GetInt("dollars")>=(Convert.ToInt32(Math.Round(Slider_.value, 0))) * PlayerPrefs.GetInt("price_share"))
         {
             StartCoroutine(buy());
         }
+        else
+        {
+            //не хватило
+        }
     }
-    public IEnumerator buy()
+    public IEnumerator buy()//отпавляет на сервер колличество купленных 100 000 -buy / 9 000 000 это новый курс
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
-        form.AddField("amount", (Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share"));
+        form.AddField("amount", (Convert.ToInt32(Math.Round(Slider_.value, 0))) * PlayerPrefs.GetInt("price_share"));
         form.AddField("num", Slider_.value.ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//возвращение курса
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Buy_Traiding.php", form);//+
 
         yield return www;
         if (www.error != null)
@@ -97,22 +101,30 @@ public class Order_Form : MonoBehaviour
         {
             
             PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
+            PlayerPrefs.SetInt("Stocks", PlayerPrefs.GetInt("Stocks") + Convert.ToInt32(Math.Round(Slider_.value, 0)));
             yield break;
 
         }
     }
     public void Sell()
     {
-        StartCoroutine(sell());
+        if (PlayerPrefs.GetInt("Stocks") >= (Convert.ToInt32(Math.Round(Slider_.value, 0))))
+        {
+            StartCoroutine(sell());
+        }
+        else
+        {
+            //не хватило акций
+        }
     }
     public IEnumerator sell()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
-        form.AddField("amount", (Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share"));
+        form.AddField("amount", (Convert.ToInt32(Math.Round(Slider_.value, 0))) * PlayerPrefs.GetInt("price_share"));
         form.AddField("num", Slider_.value.ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//возвращение курса
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Sell_Traiding.php", form);//+
 
         yield return www;
         if (www.error != null)
@@ -124,8 +136,10 @@ public class Order_Form : MonoBehaviour
         {
 
             PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
+            PlayerPrefs.SetInt("Stocks", PlayerPrefs.GetInt("Stocks") - Convert.ToInt32(Math.Round(Slider_.value, 0)));
+            PlayerPrefs.SetInt("sold_traid", PlayerPrefs.GetInt("sold_traid") + Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share"));
             yield break;
 
-        }//а есали нет???
+        }
     }
 }
