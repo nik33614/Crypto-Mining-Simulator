@@ -21,7 +21,7 @@ public class Show_Places : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Show_Places.php", form);//получение даты и времени с определенного числа в секундах
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Show_Places.php", form);
 
         yield return www;
         if (www.error != null)
