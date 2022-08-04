@@ -16,7 +16,7 @@ public class Send_Money : MonoBehaviour
     void Start()
     {
         Slider_.maxValue = PlayerPrefs.GetInt("dollars");
-        Slider_.value = Convert.ToInt32(Math.Round((float)PlayerPrefs.GetInt("dollars") / 2, 0).ToString());
+        Slider_.value = Convert.ToInt32(Math.Round((float)PlayerPrefs.GetInt("dollars") / 2.5f, 0).ToString());
     }
 
     public void Get_Number()
@@ -26,7 +26,7 @@ public class Send_Money : MonoBehaviour
     public void Get_Amount()
     {
         send_mon = Slider_.value;
-        Send.text = send_mon.ToString();
+        Send.text = send_mon.ToString()+"$";
     }
     public void Send_()
     {
@@ -37,6 +37,7 @@ public class Send_Money : MonoBehaviour
         else
         {
             Error.text = "Not enought money";
+            GameObject.Find("IAP_Panel").SetActive(true);
         }
     }
     public IEnumerator Send_Money_()

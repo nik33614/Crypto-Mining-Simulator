@@ -25,7 +25,7 @@ public class CoolingSystem : MonoBehaviour
         if(timer<=0)
         {
             Check_Time();
-            timer = 20f;
+            timer = 10f;
             
         }
         if(timer_recharge == true)
@@ -54,7 +54,16 @@ public class CoolingSystem : MonoBehaviour
         }
         else
         {
-            Coller_Left.text = www.text;
+            
+            if(www.text == "0")
+            {
+                Coller_Left.text = "0hours";
+            }
+            else
+            {
+                Coller_Left.text = www.text;
+            }
+            Debug.Log(www.text);
             string[] delimiterChars = { "h", "min" };
             string[] words = www.text.Split(delimiterChars, System.StringSplitOptions.RemoveEmptyEntries);
             if (words.Length > 1)
@@ -65,10 +74,12 @@ public class CoolingSystem : MonoBehaviour
                     a += 1;
                     if (a == 1)
                     {
+                        Debug.Log(word);
                         seconds += float.Parse(word) * 60 * 60;
                     }
                     else
                     {
+                        Debug.Log(word);
                         seconds += float.Parse(word) *60;
                     }
                 }
@@ -77,22 +88,24 @@ public class CoolingSystem : MonoBehaviour
             {
                 foreach (var word in words)
                 {
-
                     seconds += float.Parse(word) * 60;
-
                 }
             }
-            fill = seconds / (float.Parse(PlayerPrefs.GetInt("Cooler_Time").ToString()));
-            //сколько осталось делить на сколько было
+        
+            fill = seconds / (PlayerPrefs.GetInt("Cooler_Time")*60*60);
+            Debug.Log(seconds);
+            
             bar.fillAmount = fill;
             if(seconds <=3600 && seconds > 0)
             {
-                //высветить предупреждение
+                PlayerPrefs.SetInt("warning", 1);
             }
             if(seconds == 0)
             {
-                //остановить профит и высевтить ошибку
+                PlayerPrefs.SetInt("dangerous", 1);
+                PlayerPrefs.SetFloat("profit", 0);
             }
+          
             yield break;
            
         }
@@ -117,6 +130,9 @@ public class CoolingSystem : MonoBehaviour
         else
         {
             timer_recharge = true;
+           
+            PlayerPrefs.SetFloat("profit", float.Parse(www.text));
+            
             yield break;
         }
     }

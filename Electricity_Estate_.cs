@@ -6,37 +6,29 @@ using UnityEngine.UI;
 
 public class Electricity_Estate_ : MonoBehaviour
 {
-    /// <summary>
-    /// получить с сервера время
-    /// 
-    /// </summary>
-    /// 
     public Text Electricity;
     public Text Estate;
 
     float timer = 0;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
             StartCoroutine(Data_Estate());
-            StartCoroutine(Data_Electricity());
-            timer = 20f;
+            //StartCoroutine(Data_Electricity());
+            timer = 10f;
         }
+        Electricity.text = Convert.ToInt32(PlayerPrefs.GetFloat("Electricity_debt")).ToString()+"$";
     }
-    public IEnumerator Data_Estate()//получает время на сервере, сравнивает его с тем, которое в базе данных, и проводит подсчеты(1 день - сетает один долг и тд)
+    public IEnumerator Data_Estate()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//получение даты и времени с определенного числа в секундах
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Estate_Time.php", form);
 
         yield return www;
         if (www.error != null)
@@ -46,19 +38,19 @@ public class Electricity_Estate_ : MonoBehaviour
         }
         else
         {
-            Estate.text = www.text;
+            Estate.text = Math.Round(float.Parse(www.text), 0).ToString() + "$";
 
-            PlayerPrefs.SetInt("Estate_debt", Convert.ToInt32(www.text));
+            PlayerPrefs.SetFloat("Estate_debt", Convert.ToInt32(www.text));
             yield break;
 
         }
     }
-    public IEnumerator Data_Electricity()//получает время на сервере, сравнивает его с тем, которое в базе данных, и проводит подсчеты(1 день - сетает один долг и тд)
+    public IEnumerator Data_Electricity()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//получение даты и времени с определенного числа в секундах
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Electricity_Time.php", form);
 
         yield return www;
         if (www.error != null)
@@ -75,27 +67,37 @@ public class Electricity_Estate_ : MonoBehaviour
     }
     public void Pay_Est()
     {
-        if(PlayerPrefs.GetInt("dollars")>=PlayerPrefs.GetInt("Estate_debt"))
+        if(PlayerPrefs.GetInt("dollars")>=PlayerPrefs.GetFloat("Estate_debt"))
         {
-            PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - PlayerPrefs.GetInt("Estate_debt"));
+            //PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - PlayerPrefs.GetFloat("Estate_debt"));
             StartCoroutine(Send_Est());
+            PlayerPrefs.SetFloat("Estate_debt", 0);
+        }
+        else
+        {
+            GameObject.Find("IAP_Panel").SetActive(true);
         }
     }
     public void Pay_El()
     {
         if (PlayerPrefs.GetInt("dollars") >= PlayerPrefs.GetFloat("Electricity_debt"))
         {
-            PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - Convert.ToInt32(PlayerPrefs.GetFloat("Electricity_debt")));
+            //PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - Convert.ToInt32(PlayerPrefs.GetFloat("Electricity_debt")));
+            PlayerPrefs.SetFloat("Electricity_debt", 0);
             StartCoroutine(Send_El());
         }
+        else
+        {
+            GameObject.Find("IAP_Panel").SetActive(true);
+        }
     }
-    public IEnumerator Send_Est()//получает время на сервере, сравнивает его с тем, которое в базе данных, и проводит подсчеты(1 день - сетает один долг и тд)
+    public IEnumerator Send_Est()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
         form.AddField("balance", PlayerPrefs.GetInt("dollars").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//получение даты и времени с определенного числа в секундах
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Send_Est.php", form);
 
         yield return www;
         if (www.error != null)
@@ -105,18 +107,19 @@ public class Electricity_Estate_ : MonoBehaviour
         }
         else
         {
-            Electricity.text = www.text;
+            Estate.text = "0$";
+            PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
             yield break;
 
         }
     }
-    public IEnumerator Send_El()//получает время на сервере, сравнивает его с тем, которое в базе данных, и проводит подсчеты(1 день - сетает один долг и тд)
+    public IEnumerator Send_El()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
         form.AddField("balance", PlayerPrefs.GetInt("dollars").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Data_Time.php", form);//получение даты и времени с определенного числа в секундах
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Send_El.php", form);
 
         yield return www;
         if (www.error != null)
@@ -126,7 +129,8 @@ public class Electricity_Estate_ : MonoBehaviour
         }
         else
         {
-            Electricity.text = www.text;
+            Electricity.text = "0$";
+            PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
             yield break;
 
         }

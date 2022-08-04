@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Show_Places : MonoBehaviour
+public class Information : MonoBehaviour
 {
-    public Text Place_1;
-    public Text Place_2;
-    public Text Place_3;
-    public Text Place_4;
-    public Text Place_5;
-    public Text Place_6;
+    public Text Name;
+    public Text Place;
+    public Text Money;
+    public Text Next_Place;
+    
 
     void Start()
     {
-        StartCoroutine(GetPlaces());
+        StartCoroutine(GetInf());
     }
-    public IEnumerator GetPlaces()
+    public IEnumerator GetInf()
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Show_Places.php", form);
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Show_Leaderboard_Information.php", form);
 
         yield return www;
         if (www.error != null)
@@ -31,33 +30,29 @@ public class Show_Places : MonoBehaviour
         }
         else
         {
-            string[] delimiterChars = {"~"};
+            string[] delimiterChars = { "~" };
             string[] words = www.text.Split(delimiterChars, System.StringSplitOptions.RemoveEmptyEntries);
             int a = 0;
             foreach (var word in words)
             {
+                
                 switch (a)
                 {
+                    
                     case 0:
-                        Place_1.text = word;
+                        Name.text = word;
                         break;
                     case 1:
-                        Place_2.text = word;
+                        Place.text = "Your place - " + word;
                         break;
                     case 2:
-                        Place_3.text = word;
+                        Money.text = "Earned - " + word+"$";
                         break;
                     case 3:
-                        Place_4.text = word;
-                        break;
-                    case 4:
-                        Place_5.text = word;
-                        break;
-                    case 5:
-                        Place_6.text = word;
+                        Next_Place.text = "To the next place - "+word + "$";
                         break;
                 }
-                a += 1;
+                a ++;
             }
             yield break;
         }

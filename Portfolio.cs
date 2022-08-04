@@ -11,8 +11,8 @@ public class Portfolio : MonoBehaviour
 
     void FixedUpdate()
     {
-        Stocks.text = PlayerPrefs.GetInt("Stocks").ToString();
-        sold_traid.text = PlayerPrefs.GetInt("sold_traid").ToString();
-        balance.text = (PlayerPrefs.GetInt("Stocks") * PlayerPrefs.GetInt("price_share")).ToString();
+        Stocks.text = PlayerPrefs.GetInt("Stocks").ToString()+" Stocks";
+        sold_traid.text = PlayerPrefs.GetInt("sold_traid").ToString() + " $";
+        balance.text = (PlayerPrefs.GetInt("Stocks") * PlayerPrefs.GetInt("price_share")).ToString() + " $";
     }
 }

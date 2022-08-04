@@ -17,11 +17,16 @@ public class Order_Form : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetFloat("bitcoin", 100.24f);
         Slider_.maxValue = Slider_.maxValue = PlayerPrefs.GetInt("dollars")/PlayerPrefs.GetInt("price_share");
+        Slider_.value = Convert.ToInt32(Math.Round((float)PlayerPrefs.GetInt("dollars") / PlayerPrefs.GetInt("price_share") * 0.34f, 0).ToString());
+        Exchange();
     }
 
     void FixedUpdate()
    {
+        Should_Pay.text = (Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share")).ToString() + " $";
+        to_pay = Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share");
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
@@ -40,7 +45,7 @@ public class Order_Form : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
 
-        WWW www = new WWW("https://doublenikmak.ru/4.0/Get_Rate_Traiding.php", form);//+
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Get_Rate_Traiding.php", form);
 
         yield return www;
         if (www.error != null)
@@ -48,16 +53,18 @@ public class Order_Form : MonoBehaviour
             Debug.Log("Error: " + www.error);
             yield break;
         }
-        else // больше - зеленая меньше - красная. цена для всех одинакова
+        else
         {
             rate = Convert.ToInt32(www.text);
             if(rate > old_rate)
             {
-                //запустить анимку
+                Price_Share.GetComponent<Animation>().Play("More");
+                Price_Share.text = rate.ToString() + " $";
             }
             if(rate< old_rate)
             {
-                //запустить другую анимку
+                Price_Share.GetComponent<Animation>().Play("Less");
+                Price_Share.text = rate.ToString()+" $";
             }
             PlayerPrefs.SetInt("price_share", rate);
             yield break;
@@ -66,10 +73,10 @@ public class Order_Form : MonoBehaviour
     }
     public void Exchange()
     {
-        Slider_.maxValue = PlayerPrefs.GetInt("dollars") / PlayerPrefs.GetInt("price_share");
+        Slider_.maxValue = Convert.ToInt32(PlayerPrefs.GetInt("dollars") / PlayerPrefs.GetInt("price_share"));
         Should_Pay.text = (Convert.ToInt32(Math.Round(Slider_.value, 0)) * PlayerPrefs.GetInt("price_share")).ToString() + " $";
         to_pay = Convert.ToInt32(Math.Round(Slider_.value, 0))* PlayerPrefs.GetInt("price_share");
-        num.text = Slider_.value.ToString();
+        num.text = Slider_.value.ToString() + " Stocks";
     }
     public void Buy()
     {
@@ -79,10 +86,11 @@ public class Order_Form : MonoBehaviour
         }
         else
         {
+            GameObject.Find("IAP_Panel").SetActive(true);
             //не хватило
         }
     }
-    public IEnumerator buy()//отпавляет на сервер колличество купленных 100 000 -buy / 9 000 000 это новый курс
+    public IEnumerator buy()//отпpавляет на сервер колличество купленных 100 000 -buy / 9 000 000 это новый курс
     {
         WWWForm form = new WWWForm();
         form.AddField("code", PlayerPrefs.GetInt("code").ToString());
@@ -114,6 +122,7 @@ public class Order_Form : MonoBehaviour
         }
         else
         {
+            GameObject.Find("IAP_Panel").SetActive(true);
             //не хватило акций
         }
     }

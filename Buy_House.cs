@@ -9,12 +9,26 @@ public class Buy_House : MonoBehaviour
     public int cost;
     public GameObject Button;
     public GameObject Text;
+    void Start()
+    {
+
+        if (PlayerPrefs.GetInt("background") >= What_Buy)
+        {
+            Text.SetActive(false);
+            Button.SetActive(false);
+        }
+
+    }
 
     public void Buy()
     {
         if (PlayerPrefs.GetInt("dollars") >= cost)
         {
             StartCoroutine(Send_Money_());
+        }
+        else
+        {
+            GameObject.Find("IAP_Panel").SetActive(true);
         }
     }
 
@@ -35,10 +49,11 @@ public class Buy_House : MonoBehaviour
         else
         {
 
-            PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - Convert.ToInt32(www.text));
-            PlayerPrefs.SetInt("background", Convert.ToInt32(www.text));
+            PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
+            PlayerPrefs.SetInt("background", What_Buy);
 
-            //затухающая анимация
+            Text.GetComponent<Animator>().enabled = true;
+            Button.GetComponent<Animator>().enabled = true;
 
             yield break;
         }

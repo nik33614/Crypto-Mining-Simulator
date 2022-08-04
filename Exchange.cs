@@ -12,6 +12,9 @@ public class Exchange : MonoBehaviour
     private int Rate;
     public Slider Slider_;
 
+    private float Give_Bit;
+    private int Give_Dollars;
+
     void Start()
     {
         StartCoroutine(Course_Get());
@@ -44,5 +47,39 @@ public class Exchange : MonoBehaviour
     {
         Give.text = Math.Round(Slider_.value, 2).ToString()+ "₿";
         Get.text = Convert.ToInt32(Math.Round(Slider_.value, 2)*Rate).ToString()+"$";
+    }
+    public void Exchange_()
+    {
+        Give_Bit = (float)Math.Round(Slider_.value, 2);
+        Give_Dollars = Convert.ToInt32(Math.Round(Slider_.value, 2) * Rate);
+        if (PlayerPrefs.GetFloat("bitcoin") >= Give_Bit)
+        {
+            StartCoroutine(Exchange_Cor());
+        }
+        else
+        {
+            GameObject.Find("IAP_Panel").SetActive(true);
+        }
+    }
+    public IEnumerator Exchange_Cor()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("code", PlayerPrefs.GetInt("code").ToString());
+        form.AddField("bit", Give_Bit.ToString());
+        form.AddField("dollar", Give_Dollars);
+        WWW www = new WWW("https://doublenikmak.ru/4.0/Exchange.php", form);
+
+        yield return www;
+        if (www.error != null)
+        {
+            Debug.Log("Error: " + www.error);
+            yield break;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars")+ Give_Dollars);
+            PlayerPrefs.SetFloat("bitcoin", PlayerPrefs.GetFloat("bitcoin")- Give_Bit);
+            yield break;
+        }
     }
 }

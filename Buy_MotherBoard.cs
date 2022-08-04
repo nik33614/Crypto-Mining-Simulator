@@ -10,11 +10,25 @@ public class Buy_MotherBoard : MonoBehaviour
     public GameObject Button;
     public GameObject Text;
 
+    void Start()
+    {
+
+        if (PlayerPrefs.GetInt("Motherboard") >= What_Buy)
+        {
+            Text.SetActive(false);
+            Button.SetActive(false);
+        }
+
+    }
     public void Buy()
     {
         if (PlayerPrefs.GetInt("dollars") >= cost)
         {
             StartCoroutine(Send_Money_());
+        }
+        else
+        {
+            GameObject.Find("IAP_Panel").SetActive(true);
         }
     }
 
@@ -35,10 +49,11 @@ public class Buy_MotherBoard : MonoBehaviour
         else
         {
 
-            PlayerPrefs.SetInt("dollars", PlayerPrefs.GetInt("dollars") - Convert.ToInt32(www.text));
+            PlayerPrefs.SetInt("dollars", Convert.ToInt32(www.text));
             PlayerPrefs.SetInt("Motherboard", What_Buy);
-            
-            //затухающая анимация
+            Debug.Log(PlayerPrefs.GetInt("code").ToString());
+            Text.GetComponent<Animator>().enabled = true;
+            Button.GetComponent<Animator>().enabled = true;
 
             yield break;
         }

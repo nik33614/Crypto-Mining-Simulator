@@ -13,7 +13,7 @@ public class System_Inf : MonoBehaviour
 
     void Start()
     {
-        switch (PlayerPrefs.GetInt("ñpu"))
+        switch (PlayerPrefs.GetInt("cpu"))
         {
             case 1:
                 Cpu.text = "CPU: Intel Pentium";

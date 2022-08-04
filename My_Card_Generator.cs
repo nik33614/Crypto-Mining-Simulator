@@ -18,12 +18,10 @@ public class My_Card_Generator : MonoBehaviour
         if (PlayerPrefs.GetString("card") == "")
         {
             card = "7261 3300 " + Random.Range(1000, 9999).ToString()+" " + Random.Range(1000, 9999).ToString();
+            StartCoroutine(Card_Check());
+        }
 
-        }
-        else
-        {
-            Card_.text = PlayerPrefs.GetString("card");
-        }
+        Card_.text = PlayerPrefs.GetString("card");
     }
 
 
@@ -50,6 +48,7 @@ public class My_Card_Generator : MonoBehaviour
             else
             {
                 PlayerPrefs.SetString("card", card);
+                Card_.text = PlayerPrefs.GetString("card");
                 yield break;
             }
         }
